@@ -8,7 +8,7 @@ def randomization(n):
       A - a randomly-generated nx1 Numpy array.
     """
     #Your code here
-    raise NotImplementedError
+    return np.random.random([n, 1])
 
 def operations(h, w):
     """
