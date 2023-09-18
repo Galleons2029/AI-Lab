@@ -1,5 +1,6 @@
 def get_sum_metrics(predictions, metrics=[]):
     for i in range(3):
+        # 由于 lambda 函数内的 i 是在循环的外部定义的，所有这些函数都会捕获循环变量 i 的最后一个值，即2。
         metrics.append(lambda x: x + i)
 
     sum_metrics = 0

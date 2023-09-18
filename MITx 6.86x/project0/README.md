@@ -44,13 +44,15 @@ However, the recommended way of configuring your system is by using a conda envi
 We recommend that you install the latest version of Miniconda from https://docs.conda.io/en/latest/miniconda.html.
 
 You can then create a conda environment for this course using
-
+```
 conda create -n 6.86x python=3.8
+```
 Note: As mentioned above, you may use other versions of python, as long as functions available only in 3.9+ are not used.
 
 To activate this environment, use
-
+```
 conda activate 6.86x
+```
 Finally, install all of the required packages:
 
 ```
@@ -78,7 +80,8 @@ Tip: Throughout the whole online grading system, you can assume the NumPy python
 
 This project will unfold both on MITx and on your local machine. You are welcome to implement functions locally and then copy+paste your code into the MITx code boxes to fully check correctness and receive your grade for individual function implementations. Alternatively, you can also implement the functions online first and after finishing, copy+paste the solution to your local main.py file. Be wary of the number of attempts you have for each problem, especially if you choose the second development flow.
 
-How to Test Locally: In your terminal, navigate to the directory where your project files reside. Execute the command python test.py to run all the available tests.
+**How to Test Locally**: 
+In your terminal, navigate to the directory where your project files reside. Execute the command **python test.py** to run all the available tests.
 
 For this project, the test.py file will test that all required packages are correctly installed.
 
