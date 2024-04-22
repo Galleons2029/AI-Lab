@@ -24,7 +24,7 @@ Installation using pip
 
 If you already have a working installation of Python 3, you should be able to install all of the above packages using pip.
 
-```
+```shell
 pip3 install numpy
 pip3 install matplotlib
 pip3 install scipy
@@ -55,7 +55,7 @@ conda activate 6.86x
 ```
 Finally, install all of the required packages:
 
-```
+```shell
 conda install pytorch -c pytorch
 conda install numpy
 conda install matplotlib
@@ -86,3 +86,44 @@ In your terminal, navigate to the directory where your project files reside. Exe
 For this project, the test.py file will test that all required packages are correctly installed.
 
 Tip: We recommend using a proper IDE for this course such as Visual Studio Code, Pycharm, etc.
+
+
+
+
+### Introduction to ML packages
+
+In the resources tab of the course, we have provided you with two notebooks.
+
+Introduction to ML packages (part 1) Github - Notebook viewer
+Introduction to ML packages (part 2) Github - Notebook viewer
+
+They cover some of the most useful ML packages and constitute a good reference point to refer to as you progress through the course.
+
+We do not expect you to complete all sections in these notebooks immediately. For now, go through the first three sections in the first notebook on Jupyter, Numpy, and Matplotlib. Then after Unit 1 Linear Classifiers, come back to the section on Scikit learn, and while you work on Unit 3 Neural Nets, refer to the second notebook, which gives an introduction to Pytorch.
+
+We will not be using Pandas in this course, but it is a useful tool. Feel free to look at the section on Pandas at any time.
+
+By the end of the course, our hope is that you are able to recreate the content of these notebooks by yourself …and more!
+
+
+在机器学习中，有很多原因会导致模型表现不佳。模型可能设计得很差，数据可能噪声太大，可能只是初始化不好，或者超参数的选择不好，等等。因此，使用调试器至少排除工程错误是至关重要的。
+
+幸运的是，Python附带了一个名为pdb的全功能交互式调试器。
+
+下面是pdb的使用教程：
+
+## pdb - Python调试器
+### 检查变量值
+在要中断调试器的位置插入以下代码：
+```python
+import pdb; pdb.set_trace()
+```
+当执行到这一行后，Python 会停止并进入一个交互界面等待您告诉它下一步要做什么。您会看到一个(Pdb)提示。这意味着您现在已在交互式调试器中暂停并可以输入命令。
+
+从 Python 3.7 开始支持直接调用内置函数breakpoint()，它不再需要提前import pdb库，效果和pdb.set_trace()相同，而且更加灵活，当需要禁止调试时可以设置PYTHONBREAKPOINT=0（需要在命令行中设置）。
+
+如果想直接在命令行中进行调试，可输入-m pdb，例如：
+```shell
+$ python3 -m pdb app.py arg1 arg2
+```
+
